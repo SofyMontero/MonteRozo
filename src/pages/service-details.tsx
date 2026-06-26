@@ -16,7 +16,7 @@ export default function ServiceDetailsPage() {
     <Wrapper>
       <SEOCom
         title="Servicios de psicología clínica"
-        description="Terapia individual, de pareja y online. Ansiedad, estrés, autoestima y más. Dra. Montero Rozo, psicóloga clínica en Bogotá."
+        description="Terapia individual, de pareja y online. Ansiedad, estrés, autoestima y más. Dr. Montero Rozo, psicólogo clínico en Bogotá."
         url="https://monterorozo.com/servicios-factoring"
       />
 

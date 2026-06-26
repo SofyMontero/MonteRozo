@@ -1,6 +1,31 @@
+import { Heart, Users, Video } from "lucide-react";
+
+const focusAreas = [
+  "Infancia",
+  "Adolescencia",
+  "Familias",
+  "Vínculos",
+  "Bienestar",
+];
+
+const highlights = [
+  {
+    icon: Users,
+    title: "Infancia, adolescencia y familias",
+    description:
+      "Acompañamiento especializado en las distintas etapas del desarrollo y en el fortalecimiento de los vínculos familiares.",
+  },
+  {
+    icon: Heart,
+    title: "Bienestar emocional integral",
+    description:
+      "Trabajo desde una perspectiva que integra emociones, pensamientos y contexto de vida para promover cambios significativos y sostenibles.",
+  },
+];
+
 const TextFeatureNine = () => {
   return (
-    <div className="text-feature-nine position-relative mt-180 lg-mt-80">
+    <section className="text-feature-nine position-relative mt-180 lg-mt-80">
       <div className="container">
         <div className="position-relative">
           <div className="row">
@@ -9,91 +34,58 @@ const TextFeatureNine = () => {
                 <div className="title-two mb-30">
                   <h2 className="text-white">
                     Un acompañamiento{" "}
-                    <span>integral para tu bienestar.</span>
+                    <span className="text-feature-nine-accent">
+                      integral para tu bienestar.
+                    </span>
                   </h2>
                 </div>
                 <p className="text-lg text-white opacity-75 mb-50 lg-mb-30">
-                  Trabajo desde una perspectiva que integra emociones, pensamientos
-                  y contexto de vida. No se trata solo de aliviar síntomas, sino de
-                  construir herramientas duraderas.
+                  Intervención basada en evidencia, adaptada a niños,
+                  adolescentes y familias. Más allá de aliviar síntomas,
+                  construimos herramientas para el día a día.
                 </p>
                 <div className="row">
-                  <div className="col-sm-6">
-                    <div className="block mt-30">
-                      <img
-                        src="/assets/images/icon/icon_46.svg"
-                        alt=""
-                        className="lazy-img icon"
-                      />
-                      <h4 className="fw-500 text-white mt-35 lg-mt-30 mb-25">
-                        Duelo y pérdidas
-                      </h4>
-                      <p className="text-white opacity-75">
-                        Acompañamiento en procesos de duelo, separaciones y
-                        transiciones vitales difíciles.
-                      </p>
+                  {highlights.map((item) => (
+                    <div key={item.title} className="col-sm-6">
+                      <div className="block mt-30">
+                        <span className="text-feature-nine-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+                          <item.icon size={24} strokeWidth={1.75} />
+                        </span>
+                        <h4 className="fw-500 text-white mt-20 lg-mt-10 mb-25">
+                          {item.title}
+                        </h4>
+                        <p className="text-white opacity-75 mb-0">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-sm-6">
-                    <div className="block mt-30">
-                      <img
-                        src="/assets/images/icon/icon_47.svg"
-                        alt=""
-                        className="lazy-img icon"
-                      />
-                      <h4 className="fw-500 text-white mt-35 lg-mt-30 mb-25">
-                        Burnout y agotamiento
-                      </h4>
-                      <p className="text-white opacity-75">
-                        Recupera el equilibrio entre trabajo, descanso y
-                        bienestar emocional.
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div className="vertical-text-wrapper">
-        <div className="text-list">
-          <span>Ansiedad</span>
-        </div>
-        <div className="text-list">
-          <span>Autoestima</span>
-        </div>
-        <div className="text-list">
-          <span>Relaciones</span>
-        </div>
-        <div className="text-list">
-          <span>Estrés</span>
-        </div>
-        <div className="text-list">
-          <span>Bienestar</span>
-        </div>
-        <img
-          src="/assets/images/shape/shape_17.svg"
-          alt=""
-          className="lazy-img shapes shape_01"
-        />
-        <img
-          src="/assets/images/shape/shape_18.svg"
-          alt=""
-          className="lazy-img shapes shape_02"
-        />
+        {focusAreas.map((area) => (
+          <div key={area} className="text-list">
+            <span>{area}</span>
+          </div>
+        ))}
       </div>
-      <img
-        src="/assets/images/shape/shape_18.svg"
-        alt=""
-        className="lazy-img shapes shape_03"
-      />
-      <img
-        src="/assets/images/media/img_33.jpg"
-        alt="Espacio de terapia acogedor"
-        className="lazy-img shapes shape_04"
-      />
-    </div>
+
+      <div
+        className="text-feature-nine-visual shapes shape_04"
+        role="img"
+        aria-label="Atención psicológica virtual"
+      >
+        <div className="text-feature-nine-visual-inner">
+          <Video size={28} strokeWidth={1.75} />
+          <span>Atención virtual</span>
+        </div>
+      </div>
+    </section>
   );
 };
 

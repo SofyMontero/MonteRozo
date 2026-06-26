@@ -26,7 +26,7 @@ const HeroBannerTwo = () => {
             <div
               className="hero-img"
               style={{
-                backgroundImage: `linear-gradient(rgba(26, 46, 40, 0.82), rgba(26, 46, 40, 0.72)), url(${bg})`,
+                backgroundImage: `linear-gradient(rgba(62, 79, 87, 0.82), rgba(62, 79, 87, 0.72)), url(${bg})`,
               }}
             ></div>
           </div>
@@ -47,7 +47,7 @@ const HeroBannerTwo = () => {
                 transition={{ delay: 0.2, duration: 0.7 }}
               >
                 <div className="badge bg-lime-500 bg-opacity-10 fw-medium mb-3 text-white border border-white border-opacity-25">
-                  Psicología clínica · Bogotá
+                  Tarifas 2026 – 2027
                 </div>
                 <h1 className="display-5 fw-bold mb-3 text-white">
                   <div>Recupera tu bienestar</div>
@@ -58,9 +58,15 @@ const HeroBannerTwo = () => {
                   <div>y profesional</div>
                 </h1>
                 <p className="fs-5 text-white text-opacity-75 mb-4">
-                  Soy <span className="fw-semibold text-white">MonteRozo</span>,
-                  psicólogo clínico. Te acompaño en ansiedad, estrés, autoestima y
-                  relaciones con un enfoque empático, basado en evidencia y adaptado a ti.
+                  Soy{" "}
+                  <span className="fw-semibold text-white">
+                    Edwing Andrés Montero Rozo
+                  </span>
+                  , Psicólogo Clínico especializado en infancia, adolescencia y
+                  familias. Brindo atención psicológica basada en evidencia,
+                  orientada a fortalecer el bienestar emocional, acompañar los
+                  desafíos propios del desarrollo y promover relaciones familiares
+                  más saludables.
                 </p>
               </motion.div>
 
@@ -73,7 +79,7 @@ const HeroBannerTwo = () => {
                 <NavLink
                   to="/contacto"
                   className="btn btn-success bg-lime-500 d-flex align-items-center justify-content-center gap-2 px-4 py-2"
-                  aria-label="Reservar primera cita con la Dra. Montero Rozo"
+                  aria-label="Reservar primera cita con el Dr. Montero Rozo"
                 >
                   Reservar cita
                   <ArrowRight size={16} />
@@ -93,7 +99,7 @@ const HeroBannerTwo = () => {
                 transition={{ delay: 0.7, duration: 0.6 }}
               >
                 <p className="text-white text-opacity-75 small mb-0">
-                  <span className="text-lime-500 fw-semibold">Colegiada</span>{" "}
+                  <span className="text-lime-500 fw-semibold">Colegiado</span>{" "}
                   · Sesiones presenciales y online
                 </p>
               </motion.div>
@@ -111,7 +117,7 @@ const HeroBannerTwo = () => {
                   className="position-absolute top-0 start-0 w-100"
                   style={{
                     height: "0.8rem",
-                    background: "linear-gradient(to right, #7BAE9E, #1F5E59)",
+                    background: "linear-gradient(to right, #9B9D87, #3E4F57)",
                     borderRadius: "15px 15px 0px 0px",
                   }}
                 ></div>
@@ -124,9 +130,9 @@ const HeroBannerTwo = () => {
                       style={{ width: 88, height: 88 }}
                     />
                     <div>
-                      <h3 className="h4 fw-bold mb-1">MonteRozo</h3>
+                      <h3 className="h4 fw-bold mb-1">Edwing Andrés Montero Rozo</h3>
                       <p className="text-muted small mb-0">
-                        Psicólogo clínico · Terapia cognitivo-conductual
+                        Psicólogo clínico · Infancia, adolescencia y familias
                       </p>
                       <p className="text-muted small mb-0">
                         N.º colegiado: COL-000000
@@ -151,7 +157,7 @@ const HeroBannerTwo = () => {
                         <Clock className="text-lime-500 flex-shrink-0 mt-1" size={18} />
                         <div>
                           <p className="fw-semibold mb-0 small">Sesiones de 50 min</p>
-                          <p className="text-muted small mb-0">Desde $120.000 COP</p>
+                          <p className="text-muted small mb-0">Tarifas 2026 – 2027</p>
                         </div>
                       </div>
                     </div>

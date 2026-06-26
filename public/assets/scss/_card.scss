@@ -17,7 +17,7 @@
     position: relative;
     padding: 50px 40px 48px;
     background: #fff;
-    border: 1px solid #EBF3EE;
+    border: 1px solid $color-nine;
     border-radius: 20px;
     .icon {
         height: 50px;
@@ -430,7 +430,7 @@
 .card-style-eighteen {
     padding: 5px 35px 0;
     border-radius: 20px;
-    background: #1F5E59;
+    background: #3E4F57;
     z-index: 1;
     &:before {
         content: '';

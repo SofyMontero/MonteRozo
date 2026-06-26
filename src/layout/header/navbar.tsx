@@ -98,7 +98,7 @@ const Navbar = () => {
         <NavLink to="/contacto" className="signup-btn-one icon-link w-100 mt-20">
           <span
             className="flex-fill text-white text-center"
-            style={{ background: "#7BAE9E" }}
+            style={{ background: "#9B9D87" }}
           >
             Reservar cita
           </span>

@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <Wrapper>
       <SEOCom
-        title="Dra. Montero Rozo"
+        title="Dr. Montero Rozo"
         url="https://monterorozo.com/"
       />
 

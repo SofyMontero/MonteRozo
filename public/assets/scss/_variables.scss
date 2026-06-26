@@ -4,19 +4,19 @@ $sub-font: 'ClashDisplay';
 $magnita: 'Magnita';
 $bootstrapFont: 'bootstrap-icons';
 
-// Color Settings
-$text-color: rgba(0,0,0,0.7);
-$text-dark: #000;
-$heading: #19352D;
-$color-one: #7BAE9E;
-$color-two: #1A2E28;
-$color-three:#1A2E28;
-$color-four: #B8D4C8;
-$color-five: #0E3E2F;
-$color-six: #A8C5B8;
-$color-seven: #044F3B;
-$color-eight: #1F5E59;
-$color-nine: #C5DDD3;
-$light-bg-one: #EBF3EE;
-$light-bg-two: #EDF1EE;
-$cyan: #DCEFF0;
+// Color Settings — paleta extraída de logomr.jpeg
+$text-color: rgba(62, 79, 87, 0.75);
+$text-dark: #3E4F57;
+$heading: #3E4F57;
+$color-one: #9B9D87;       // verde salvia (hojas del logo)
+$color-two: #3E4F57;       // gris azulado carbón (texto e iconos)
+$color-three: #3E4F57;
+$color-four: #D4D7C4;      // salvia claro
+$color-five: #2F3D44;      // carbón más oscuro
+$color-six: #B0B5A0;       // salvia medio
+$color-seven: #7A7D6A;     // salvia profundo
+$color-eight: #4A5961;     // carbón interactivo
+$color-nine: #E8EAE0;      // fondo salvia muy suave
+$light-bg-one: #FEFAF7;    // crema del logo
+$light-bg-two: #F5F3EF;
+$cyan: #E8EBE4;
