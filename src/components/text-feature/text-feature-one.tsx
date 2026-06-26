@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import { SectionLink } from "@/components/section-link";
+import { SECTIONS } from "@/data/sections";
 
 const interventionAreas = [
   {
@@ -88,14 +89,14 @@ const TextFeatureOne = () => {
               primera sesión exploraremos tus necesidades y definiremos juntos un
               plan de trabajo claro, personalizado y basado en evidencia.
             </p>
-            <NavLink to="/contacto" className="btn-four icon-link">
+            <SectionLink section={SECTIONS.contacto} className="btn-four icon-link">
               <span>Agenda una primera consulta</span>
               <img
                 src="/assets/images/icon/icon_09.svg"
                 alt=""
                 className="lazy-img icon ms-1"
               />
-            </NavLink>
+            </SectionLink>
           </div>
         </div>
 

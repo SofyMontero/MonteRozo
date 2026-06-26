@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Clock, Shield, Video } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { SectionLink } from "@/components/section-link";
+import { SECTIONS } from "@/data/sections";
 import Slider from "react-slick";
 import { BRAND } from "@/data/brand-assets";
 
@@ -76,20 +77,20 @@ const HeroBannerTwo = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
-                <NavLink
-                  to="/contacto"
+                <SectionLink
+                  section={SECTIONS.contacto}
                   className="btn btn-success bg-lime-500 d-flex align-items-center justify-content-center gap-2 px-4 py-2"
                   aria-label="Reservar primera cita con el Dr. Montero Rozo"
                 >
                   Reservar cita
                   <ArrowRight size={16} />
-                </NavLink>
-                <NavLink
-                  to="/contacto"
+                </SectionLink>
+                <SectionLink
+                  section={SECTIONS.contacto}
                   className="btn btn-outline-light d-flex align-items-center justify-content-center gap-2 px-4 py-2"
                 >
-                  Consulta inicial gratuita
-                </NavLink>
+                  Agendar primera consulta
+                </SectionLink>
               </motion.div>
 
               <motion.div
@@ -181,13 +182,13 @@ const HeroBannerTwo = () => {
                     </div>
                   </div>
 
-                  <NavLink
-                    to="/contacto"
+                  <SectionLink
+                    section={SECTIONS.contacto}
                     className="btn btn-success bg-lime-500 w-100 d-flex align-items-center justify-content-center gap-2 py-2"
                   >
                     Quiero reservar mi cita
                     <ArrowRight size={16} />
-                  </NavLink>
+                  </SectionLink>
                   <p className="text-center text-muted small mt-3 mb-0">
                     Respuesta en menos de 24 horas · Sin compromiso en la consulta inicial
                   </p>

@@ -1,5 +1,6 @@
-import { NavLink } from "react-router-dom";
 import { BRAND } from "@/data/brand-assets";
+import { SectionLink } from "@/components/section-link";
+import { SECTIONS } from "@/data/sections";
 import Navbar from "./navbar";
 
 const HeaderTwo = () => {
@@ -9,14 +10,14 @@ const HeaderTwo = () => {
         <div className="top-header">
           <div className="d-flex align-items-center justify-content-between">
             <div className="logo order-lg-0">
-              <NavLink to="/" className="d-flex align-items-center text-decoration-none">
+              <SectionLink section={SECTIONS.inicio} className="d-flex align-items-center text-decoration-none">
                 <img
                   src={BRAND.logo}
                   alt={BRAND.logoAlt}
                   height={52}
                   style={{ width: "auto", borderRadius: 8 }}
                 />
-              </NavLink>
+              </SectionLink>
             </div>
 
             <div className="right-widget ms-auto ms-lg-0 me-3 me-lg-0 order-lg-3">
@@ -33,9 +34,9 @@ const HeaderTwo = () => {
                   </a>
                 </li>
                 <li className="d-none d-md-inline-block ms-3 ms-xl-4">
-                  <NavLink to="/contacto" className="btn-one tran3s">
+                  <SectionLink section={SECTIONS.contacto} className="btn-one tran3s">
                     Reservar cita
-                  </NavLink>
+                  </SectionLink>
                 </li>
               </ul>
             </div>

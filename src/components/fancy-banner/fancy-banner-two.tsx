@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 const testimonials = [
   {
     quote:
@@ -36,7 +34,7 @@ const FancyBannerTwo = () => {
           </div>
         </div>
 
-        <div className="row g-4 mb-80 lg-mb-50">
+        <div className="row g-4">
           {testimonials.map((item, i) => (
             <div key={i} className="col-lg-4">
               <div className="card-style-two vstack tran3s w-100 h-100 p-4 p-md-5">
@@ -45,28 +43,6 @@ const FancyBannerTwo = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center wow fadeInUp">
-          <div className="row">
-            <div className="col-lg-8 m-auto">
-              <div className="title-one">
-                <h2>Tu bienestar no puede esperar</h2>
-              </div>
-              <p className="text-lg mt-40 lg-mt-30 mb-30">
-                Reserva tu consulta inicial gratuita y descubre si somos buen
-                match terapéutico.
-              </p>
-              <div className="d-inline-flex flex-wrap justify-content-center">
-                <NavLink to="/contacto" className="btn-four mt-10 me-2">
-                  Agendar cita
-                </NavLink>
-                <NavLink to="/servicios-factoring" className="btn-six mt-10 ms-2">
-                  Conocer servicios
-                </NavLink>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

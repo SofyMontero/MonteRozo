@@ -15,7 +15,9 @@ const SEOCom = ({
   image = "/assets/images/logo/logomr.jpeg",
   url = "https://monterorozo.com",
 }: IProps) => {
-  const fullTitle = `${title} | Psicóloga Clínica — Terapia presencial y online`;
+  const siteName = "MonteRozo Psicología";
+  const fullTitle =
+    !title || title === siteName ? siteName : `${title} | ${siteName}`;
 
   return (
     <Helmet>

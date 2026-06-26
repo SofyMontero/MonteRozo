@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { SectionLink } from "@/components/section-link";
+import { SECTIONS } from "@/data/sections";
 
 const processSteps = [
   {
@@ -68,11 +69,11 @@ const BlockFeatureTwo = () => {
               contexto familiar.
             </p>
             <div className="d-inline-flex flex-wrap align-items-center gap-2">
-              <NavLink to="/contacto" className="btn-four mt-15">
+              <SectionLink section={SECTIONS.contacto} className="btn-four mt-15">
                 Agendar primera consulta
-              </NavLink>
-              <NavLink
-                to="/servicios-factoring"
+              </SectionLink>
+              <SectionLink
+                section={SECTIONS.servicios}
                 className="btn-three icon-link mt-15"
               >
                 <span>Conocer servicios</span>
@@ -81,7 +82,7 @@ const BlockFeatureTwo = () => {
                   alt=""
                   className="lazy-img icon ms-1"
                 />
-              </NavLink>
+              </SectionLink>
             </div>
           </div>
 

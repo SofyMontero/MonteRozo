@@ -1,6 +1,9 @@
+import { SectionId } from "@/data/sections";
+
 export interface IMenu {
   id: number;
   link: string;
+  section: SectionId;
   title: string;
   dropdown?: boolean;
   dropdown_menus?: {
