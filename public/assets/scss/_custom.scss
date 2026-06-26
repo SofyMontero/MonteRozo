@@ -4,6 +4,18 @@
   }
 }
 
+:root {
+  --mr-primary: #394A52;
+  --mr-secondary: #A7B29C;
+  --mr-background: #FAF8F4;
+  --mr-surface: #FFFFFF;
+  --mr-background-alt: #EEF4F5;
+  --mr-text: #394A52;
+  --mr-text-muted: #5F6A72;
+  --mr-border: #E8ECEA;
+  --mr-hover: #8E9B84;
+}
+
 section[id] {
   scroll-margin-top: 110px;
 }

@@ -5,7 +5,7 @@ import { SECTIONS } from "@/data/sections";
 import Slider from "react-slick";
 import { BRAND } from "@/data/brand-assets";
 
-const slider_bg = ["/assets/images/gallery/img_03.jpg"];
+const slider_bg = ["/assets/images/gallery/bannermr.png"];
 
 const slider_setting = {
   dots: false,
@@ -27,7 +27,8 @@ const HeroBannerTwo = () => {
             <div
               className="hero-img"
               style={{
-                backgroundImage: `linear-gradient(rgba(62, 79, 87, 0.82), rgba(62, 79, 87, 0.72)), url(${bg})`,
+                backgroundImage: `linear-gradient(rgba(57, 74, 82, 0.82), rgba(57, 74, 82, 0.72)), url(${bg})`,
+                backgroundPosition: "center 15%",
               }}
             ></div>
           </div>
@@ -118,7 +119,7 @@ const HeroBannerTwo = () => {
                   className="position-absolute top-0 start-0 w-100"
                   style={{
                     height: "0.8rem",
-                    background: "linear-gradient(to right, #9B9D87, #3E4F57)",
+                    background: "linear-gradient(to right, #A7B29C, #394A52)",
                     borderRadius: "15px 15px 0px 0px",
                   }}
                 ></div>

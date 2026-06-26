@@ -93,7 +93,7 @@ const BlockFeatureTwo = () => {
                   className="h-100 rounded-4 overflow-hidden"
                   style={{
                     backgroundImage:
-                      "linear-gradient(rgba(62, 79, 87, 0.08), rgba(155, 157, 135, 0.15)), url(/assets/images/media/background.png)",
+                      "linear-gradient(rgba(57, 74, 82, 0.08), rgba(167, 178, 156, 0.15)), url(/assets/images/media/background.png)",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     minHeight: 320,

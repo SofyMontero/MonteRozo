@@ -61,34 +61,34 @@
 
 .bg-lime-500 {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(155 157 135 / var(--tw-bg-opacity, 1)) !important;
-  border-color: #8A8C78 !important;
+  background-color: rgb(167 178 156 / var(--tw-bg-opacity, 1)) !important;
+  border-color: #8E9B84 !important;
   &:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(130 132 115 / var(--tw-bg-opacity, 1));
-    border-color: #757768 !important;
+    background-color: rgb(142 155 132 / var(--tw-bg-opacity, 1));
+    border-color: #7A8772 !important;
     color: #fff !important;
   }
   .btn:disabled {
     opacity: 0.5 !important;
-    background-color: rgb(155 157 135 / var(--tw-bg-opacity, 1)) !important;
-    border-color: #8A8C78 !important;
+    background-color: rgb(167 178 156 / var(--tw-bg-opacity, 1)) !important;
+    border-color: #8E9B84 !important;
   }
 }
 
 .bg-gradient-lime-500 {
   --tw-bg-opacity: 1 !important;
-  background: linear-gradient(to right, rgb(155, 157, 135), rgb(62, 79, 87));
+  background: linear-gradient(to right, rgb(167, 178, 156), rgb(57, 74, 82));
   &:hover {
     --tw-bg-opacity: 1;
-    background: linear-gradient(to right, rgb(130, 132, 115), rgb(47, 61, 68));
+    background: linear-gradient(to right, rgb(142, 155, 132), rgb(45, 58, 64));
     color: #fff !important;
   }
 }
 
 .text-lime-500 {
   --bs-text-opacity: 1;
-  color: rgba(155 157 135 / var(--bs-text-opacity)) !important;
+  color: rgba(167 178 156 / var(--bs-text-opacity)) !important;
 }
 .text-gray-700 {
   --tw-text-opacity: 1;
@@ -108,19 +108,19 @@
 }
 .border-lime-100 {
   --tw-border-opacity: 1;
-  border-color: rgb(212 215 196 / var(--tw-border-opacity, 1));
+  border-color: rgb(232 236 234 / var(--tw-border-opacity, 1));
 }
 .bg-lime-50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(245 244 239 / var(--tw-bg-opacity, 1));
+  background-color: rgb(238 244 245 / var(--tw-bg-opacity, 1));
 }
 .form-control:focus,
 .form-select:focus {
   color: var(--bs-body-color);
   background-color: var(--bs-body-bg);
-  border-color: #9B9D87 !important;
+  border-color: #A7B29C !important;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgb(232 234 224 / var(--tw-border-opacity, 1));
+  box-shadow: 0 0 0 0.25rem rgb(232 236 234 / var(--tw-border-opacity, 1));
 }
 
 .btn-outline-secondary:hover {
@@ -141,7 +141,7 @@
 
 .border-success {
   --bs-border-opacity: 1;
-  border-color: rgba(155 157 135 / var(--bs-text-opacity)) !important;
+  border-color: rgba(167 178 156 / var(--bs-text-opacity)) !important;
 }
 
 .rotate-y-180 {

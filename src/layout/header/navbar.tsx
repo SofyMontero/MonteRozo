@@ -32,7 +32,7 @@ const Navbar = () => {
         >
           <span
             className="flex-fill text-white text-center"
-            style={{ background: "#9B9D87" }}
+            style={{ background: "#A7B29C" }}
           >
             Reservar cita
           </span>

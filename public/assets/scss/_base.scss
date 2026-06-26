@@ -9,6 +9,7 @@ body {
   font-size: 20px;
   position: relative;
   color: $text-color;
+  background-color: $light-bg-one;
 }
 .main-page-wrapper {
   overflow-x: hidden;
@@ -45,7 +46,7 @@ hr {opacity: 0.09; margin: 5px 0;}
 .light-bg {background-color: $light-bg-two;}
 .light-bg-deep {background-color: $light-bg-one;}
 .font-magnita {font-family: $magnita;}
-.light-bg-page-wrapper {background: #EDF8EB;}
+.light-bg-page-wrapper {background: $light-bg-two;}
 .color-deep {color: $color-eight;}
 .box-layout {margin: 30px;}
 //  Preloader
@@ -525,7 +526,7 @@ hr {opacity: 0.09; margin: 5px 0;}
   padding: 0 45px;
   text-align: center;
   border-radius: 40px;
-  color: #3E4F57;
+  color: $text-dark;
   min-width: 175px;
   background-color: $color-nine;
   @include transition(0.3s);
@@ -539,7 +540,7 @@ hr {opacity: 0.09; margin: 5px 0;}
   .upper-title {
     font-weight: 500;
     margin-bottom: 14px;
-    color: #46846A;
+    color: $color-seven;
   }
   h2 {
     font-weight: 700;
@@ -549,7 +550,7 @@ hr {opacity: 0.09; margin: 5px 0;}
   .upper-title {
     font-weight: 500;
     margin-bottom: 5px;
-    color: #1CA161;
+    color: $color-one;
   }
   h2 {
     font-size: 72px;
@@ -568,7 +569,7 @@ hr {opacity: 0.09; margin: 5px 0;}
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 15px;
-    color: #1CA161;
+    color: $color-one;
   }
   h2 {
     font-weight: 700;
