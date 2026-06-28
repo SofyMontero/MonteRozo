@@ -1,25 +1,37 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { CONTACT_FORM_ENDPOINT } from "@/data/contact-config";
 import ErrorMsg from "../common/err-msg";
 
 type FormData = {
   name: string;
   email: string;
   phone: string;
-  company: string;
   message: string;
 };
 
 const schema = yup.object().shape({
-  name: yup.string().required().label("Name"),
-  email: yup.string().required().email().label("Email"),
-  phone: yup.string().required().label("Phone"),
-  company: yup.string().required().label("Company"),
-  message: yup.string().required().min(10).label("Message"),
+  name: yup.string().required("El nombre es obligatorio").label("Nombre"),
+  email: yup
+    .string()
+    .required("El correo es obligatorio")
+    .email("Ingresa un correo válido")
+    .label("Email"),
+  phone: yup.string().required("El teléfono es obligatorio").label("Teléfono"),
+  message: yup
+    .string()
+    .required("El mensaje es obligatorio")
+    .min(10, "Escribe al menos 10 caracteres")
+    .label("Mensaje"),
 });
 
 const ContactForm = () => {
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">(
+    "idle",
+  );
+
   const {
     register,
     handleSubmit,
@@ -28,10 +40,38 @@ const ContactForm = () => {
   } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
-  const onSubmit = handleSubmit((data) => {
-    alert(JSON.stringify(data));
-    reset();
+
+  const onSubmit = handleSubmit(async (data) => {
+    setStatus("sending");
+
+    try {
+      const response = await fetch(CONTACT_FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          message: data.message,
+          _subject: `Nueva solicitud de cita — ${data.name}`,
+          _template: "table",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Error al enviar");
+      }
+
+      setStatus("success");
+      reset();
+    } catch {
+      setStatus("error");
+    }
   });
+
   return (
     <form id="contact-form" onSubmit={onSubmit}>
       <div className="messages"></div>
@@ -63,26 +103,13 @@ const ContactForm = () => {
               <ErrorMsg msg={errors.phone?.message as string} />
             </div>
           </div>
-          <div className="input-group-meta form-group mb-30">
-            <label htmlFor="company">Empresa*</label>
-            <input
-              type="text"
-              placeholder="Nombre de la empresa*"
-              {...register("company")}
-              id="company"
-              name="company"
-            />
-            <div className="help-block with-errors">
-              <ErrorMsg msg={errors.company?.message as string} />
-            </div>
-          </div>
         </div>
         <div className="col-12">
           <div className="input-group-meta form-group mb-40">
-            <label htmlFor="">Email*</label>
+            <label htmlFor="email">Correo electrónico*</label>
             <input
               type="email"
-              placeholder="Ingresa tu email*"
+              placeholder="Ingresa tu correo*"
               {...register("email")}
               id="email"
               name="email"
@@ -94,20 +121,36 @@ const ContactForm = () => {
         </div>
         <div className="col-12">
           <div className="input-group-meta form-group mb-35">
+            <label htmlFor="message">Mensaje*</label>
             <textarea
-              placeholder="Mensaje*"
+              placeholder="Cuéntame cómo puedo ayudarte*"
               {...register("message")}
               id="message"
               name="message"
-            ></textarea>
+            />
             <div className="help-block with-errors">
               <ErrorMsg msg={errors.message?.message as string} />
             </div>
           </div>
         </div>
         <div className="col-12">
-          <button type="submit" className="btn-four tran3s w-100 d-block">
-            Enviar mensaje
+          {status === "success" && (
+            <p className="text-success small mb-3">
+              Mensaje enviado. Te responderé pronto a tu correo.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-danger small mb-3">
+              No se pudo enviar el mensaje. Intenta de nuevo o escríbeme por
+              WhatsApp.
+            </p>
+          )}
+          <button
+            type="submit"
+            className="btn-four tran3s w-100 d-block"
+            disabled={status === "sending"}
+          >
+            {status === "sending" ? "Enviando..." : "Enviar mensaje"}
           </button>
         </div>
       </div>

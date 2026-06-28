@@ -11,7 +11,7 @@ export default function ContactPage() {
     <Wrapper>
       <SEOCom
         title="Contacto"
-        description="Agenda tu cita con el Dr. Montero Rozo. Terapia presencial y online en Bogotá. Consulta inicial gratuita."
+        description="Agenda tu cita con el Dr. Montero Rozo. Terapia psicológica 100% virtual. Consulta inicial sin compromiso."
         url="https://monterorozo.com/contacto"
       />
 

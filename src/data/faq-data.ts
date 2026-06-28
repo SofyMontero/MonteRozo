@@ -19,8 +19,8 @@ const faq_data: IFaq[] = [
   },
   {
     id: "Three",
-    title: "¿Ofreces terapia online?",
-    desc: "Sí. Las sesiones online se realizan por videollamada en una plataforma segura y confidencial. Tienen la misma calidad y efectividad que las sesiones presenciales, con la comodidad de conectarte desde donde prefieras.",
+    title: "¿Cómo funciona la atención virtual?",
+    desc: "Sí. Todas las sesiones se realizan por videollamada en una plataforma segura y confidencial, con la comodidad de conectarte desde donde prefieras.",
   },
   {
     id: "Four",

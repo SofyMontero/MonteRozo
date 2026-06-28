@@ -18,7 +18,7 @@ const testimonials = [
 
 const FancyBannerTwo = () => {
   return (
-    <div className="fancy-banner-two mt-150 lg-mt-80 mb-150 lg-mb-60">
+    <section className="testimonials-section mt-120 lg-mt-80 mb-120 lg-mb-60">
       <div className="container">
         <div className="text-center wow fadeInUp mb-80 lg-mb-50">
           <div className="row">
@@ -36,7 +36,7 @@ const FancyBannerTwo = () => {
 
         <div className="row g-4">
           {testimonials.map((item, i) => (
-            <div key={i} className="col-lg-4">
+            <div key={i} className="col-lg-4 col-md-6">
               <div className="card-style-two vstack tran3s w-100 h-100 p-4 p-md-5">
                 <p className="mb-4 fst-italic">"{item.quote}"</p>
                 <p className="fw-semibold mb-0 mt-auto">{item.author}</p>
@@ -45,7 +45,7 @@ const FancyBannerTwo = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

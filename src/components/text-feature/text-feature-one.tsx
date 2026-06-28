@@ -1,9 +1,12 @@
+import type { LucideIcon } from "lucide-react";
+import { ArrowRight, Baby, Check, UserRound, Users } from "lucide-react";
 import { SectionLink } from "@/components/section-link";
+import { FeatureIcon } from "@/components/ui/feature-icon";
 import { SECTIONS } from "@/data/sections";
 
 const interventionAreas = [
   {
-    emoji: "👦",
+    icon: Baby,
     title: "Infancia y desarrollo emocional",
     description:
       "Acompaño a niños que presentan dificultades emocionales, conductuales o de adaptación, promoviendo habilidades que favorezcan su bienestar y desarrollo integral.",
@@ -16,7 +19,7 @@ const interventionAreas = [
     ],
   },
   {
-    emoji: "🧑",
+    icon: UserRound,
     title: "Adolescencia y bienestar emocional",
     description:
       "Un espacio seguro para abordar los desafíos propios de la adolescencia, fortaleciendo la autoestima, la regulación emocional y la construcción de una identidad saludable.",
@@ -29,7 +32,7 @@ const interventionAreas = [
     ],
   },
   {
-    emoji: "👨‍👩‍👧‍👦",
+    icon: Users,
     title: "Orientación y acompañamiento familiar",
     description:
       "Trabajo con padres y cuidadores para fortalecer la comunicación, establecer límites saludables y construir relaciones familiares más positivas.",
@@ -44,28 +47,26 @@ const interventionAreas = [
 ];
 
 function InterventionCard({
-  emoji,
+  icon: Icon,
   title,
   description,
   topics,
 }: {
-  emoji: string;
+  icon: LucideIcon;
   title: string;
   description: string;
   topics: string[];
 }) {
   return (
     <div className="card-style-two vstack tran3s w-100 mt-30 h-100">
-      <span className="fs-2 mb-3" role="img" aria-hidden="true">
-        {emoji}
-      </span>
+      <FeatureIcon icon={Icon} size={24} className="mb-3" />
       <h4 className="fw-bold mb-20">{title}</h4>
       <p className="mb-25">{description}</p>
       <p className="fw-semibold small mb-2">Temas frecuentes:</p>
       <ul className="style-none ps-0 mb-0 flex-grow-1">
         {topics.map((topic) => (
           <li key={topic} className="d-flex align-items-start gap-2 mb-2 small">
-            <span className="text-lime-500 fw-bold">•</span>
+            <Check className="text-lime-500 flex-shrink-0 mt-1" size={14} strokeWidth={2.5} />
             <span>{topic}</span>
           </li>
         ))}
@@ -89,13 +90,12 @@ const TextFeatureOne = () => {
               primera sesión exploraremos tus necesidades y definiremos juntos un
               plan de trabajo claro, personalizado y basado en evidencia.
             </p>
-            <SectionLink section={SECTIONS.contacto} className="btn-four icon-link">
+            <SectionLink
+              section={SECTIONS.contacto}
+              className="btn-four icon-link d-inline-flex align-items-center gap-2"
+            >
               <span>Agenda una primera consulta</span>
-              <img
-                src="/assets/images/icon/icon_09.svg"
-                alt=""
-                className="lazy-img icon ms-1"
-              />
+              <ArrowRight size={16} />
             </SectionLink>
           </div>
         </div>
@@ -108,7 +108,7 @@ const TextFeatureOne = () => {
               data-wow-delay={`0.${i + 1}s`}
             >
               <InterventionCard
-                emoji={area.emoji}
+                icon={area.icon}
                 title={area.title}
                 description={area.description}
                 topics={area.topics}

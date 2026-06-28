@@ -1,18 +1,27 @@
-import { Video, MessageCircle } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import {
+  Handshake,
+  MessageCircle,
+  Microscope,
+  Sprout,
+  Users,
+  Video,
+} from "lucide-react";
+import { FeatureIcon } from "@/components/ui/feature-icon";
 
 function UpperCardItem({
-  icon,
+  icon: Icon,
   title,
   subtitle,
 }: {
-  icon: React.ReactNode;
+  icon: LucideIcon;
   title: string;
   subtitle: string;
 }) {
   return (
     <div className="card-style-one d-flex w-100 mb-35">
       <div className="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
-        {icon}
+        <FeatureIcon icon={Icon} size={26} />
       </div>
       <div className="text ps-4">
         <h4 className="fw-bold">{title}</h4>
@@ -23,19 +32,17 @@ function UpperCardItem({
 }
 
 function DifferentialCard({
-  emoji,
+  icon: Icon,
   title,
   description,
 }: {
-  emoji: string;
+  icon: LucideIcon;
   title: string;
   description: string;
 }) {
   return (
     <div className="card-style-two vstack tran3s w-100 mt-30 h-100 p-4">
-      <span className="fs-2 mb-3" role="img" aria-hidden="true">
-        {emoji}
-      </span>
+      <FeatureIcon icon={Icon} size={24} className="mb-3" />
       <h4 className="fw-bold mb-25">{title}</h4>
       <p className="mb-0">{description}</p>
     </div>
@@ -44,25 +51,25 @@ function DifferentialCard({
 
 const differentials = [
   {
-    emoji: "👨‍👩‍👧‍👦",
+    icon: Users,
     title: "Especialista en infancia, adolescencia y familias",
     description:
       "Acompañamiento adaptado a las necesidades de cada etapa del desarrollo y al contexto familiar de cada consultante.",
   },
   {
-    emoji: "🔬",
+    icon: Microscope,
     title: "Enfoque basado en evidencia",
     description:
       "Intervenciones respaldadas científicamente y adaptadas a las características, objetivos y ritmo de cada proceso terapéutico.",
   },
   {
-    emoji: "🤝",
+    icon: Handshake,
     title: "Espacio seguro y confidencial",
     description:
       "Un entorno de escucha, respeto y confianza donde podrás expresar tus experiencias sin juicios y con total confidencialidad.",
   },
   {
-    emoji: "🌱",
+    icon: Sprout,
     title: "Herramientas para cambios duraderos",
     description:
       "Más allá de la consulta, trabajaremos estrategias prácticas que favorezcan el bienestar emocional y el fortalecimiento de los vínculos familiares.",
@@ -78,16 +85,16 @@ const BlockFeatureOne = ({ style_2 = false }: { style_2?: boolean }) => {
         <div className="upper-wrapper mb-110 lg-mb-80">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-lg-5 wow fadeInUp">
+              <div className="col-lg-5 col-12 wow fadeInUp">
                 <UpperCardItem
-                  icon={<Video className="text-lime-500" size={28} />}
+                  icon={Video}
                   title="Atención Virtual"
-                  subtitle="Sesiones de psicología clínica para niños, adolescentes y familias, desde cualquier lugar, con la misma confidencialidad y calidad de la atención presencial."
+                  subtitle="Sesiones de psicología clínica para niños, adolescentes y familias, desde cualquier lugar, con total confidencialidad y calidad profesional."
                 />
               </div>
-              <div className="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+              <div className="col-lg-5 col-12 wow fadeInUp" data-wow-delay="0.1s">
                 <UpperCardItem
-                  icon={<MessageCircle className="text-lime-500" size={28} />}
+                  icon={MessageCircle}
                   title="Primera consulta"
                   subtitle="Un primer encuentro para comprender tu situación, resolver inquietudes y definir el mejor camino de acompañamiento según tus necesidades."
                 />
@@ -115,7 +122,7 @@ const BlockFeatureOne = ({ style_2 = false }: { style_2?: boolean }) => {
                 data-wow-delay={`0.${i + 1}s`}
               >
                 <DifferentialCard
-                  emoji={item.emoji}
+                  icon={item.icon}
                   title={item.title}
                   description={item.description}
                 />

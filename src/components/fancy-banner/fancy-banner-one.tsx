@@ -58,14 +58,14 @@ const FancyBannerOne = () => {
 
         <div className="row g-4 mb-50 lg-mb-30">
           {plans.map((plan) => (
-            <div key={plan.title} className="col-lg-3 col-md-6">
+            <div key={plan.title} className="col-lg-3 col-sm-6">
               <div className="h-100 p-4 rounded-4 bg-light border border-light-subtle">
                 <h3 className="h5 fw-bold mb-1">{plan.title}</h3>
                 {plan.subtitle && (
                   <p className="text-muted small mb-3">{plan.subtitle}</p>
                 )}
                 {!plan.subtitle && <div className="mb-3" />}
-                <p className="display-6 fw-bold text-lime-500 mb-2">
+                <p className="honorarios-price text-lime-500 mb-2">
                   {plan.price}
                 </p>
                 {plan.savings && (

@@ -1,6 +1,7 @@
 import { BRAND } from "@/data/brand-assets";
 import { SectionLink } from "@/components/section-link";
 import { SECTIONS } from "@/data/sections";
+import { CONTACT_EMAIL, CONTACT_MAILTO, WHATSAPP_URL } from "@/data/contact-config";
 import FooterSocial from "./footer-social";
 
 const Footer = () => {
@@ -68,10 +69,10 @@ const Footer = () => {
               <h5 className="footer-title">Contacto</h5>
               <ul className="footer-nav-link style-none">
                 <li>
-                  <a href="mailto:contacto@monterorozo.com">contacto@monterorozo.com</a>
+                  <a href={CONTACT_MAILTO}>{CONTACT_EMAIL}</a>
                 </li>
                 <li>
-                  <a href="https://wa.me/573007000000" target="_blank" rel="noopener noreferrer">
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                     WhatsApp
                   </a>
                 </li>
@@ -86,8 +87,8 @@ const Footer = () => {
       <div className="container">
         <div className="bottom-footer">
           <div className="row align-items-center">
-            <div className="col-lg-5 order-lg-last mb-15">
-              <div className="footer-newsletter float-xl-end">
+            <div className="col-lg-5 order-lg-last mb-15 mb-lg-0">
+              <div className="footer-newsletter">
                 <h5 className="footer-title">Recibe recursos de bienestar</h5>
                 <form action="#">
                   <input type="email" placeholder="Tu correo electrónico" />

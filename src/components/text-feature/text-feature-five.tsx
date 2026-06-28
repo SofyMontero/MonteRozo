@@ -21,7 +21,7 @@ const TextFeatureFive = () => {
                 <ul className="style-none">
                   <li>Sesiones individuales de 50 minutos</li>
                   <li>Terapia de pareja y relaciones</li>
-                  <li>Modalidad presencial u online</li>
+                  <li>Modalidad 100% virtual</li>
                   <li>Consulta inicial gratuita de orientación</li>
                 </ul>
                 <NavLink

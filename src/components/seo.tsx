@@ -10,7 +10,7 @@ type IProps = {
 
 const SEOCom = ({
   title,
-  description = "Psicólogo clínico en Bogotá. Terapia para ansiedad, estrés, autoestima y relaciones. Sesiones presenciales y online con el Dr. Montero Rozo.",
+  description = "Psicólogo clínico en Bogotá. Terapia virtual para ansiedad, estrés, autoestima y relaciones. Atención 100% online con el Dr. Montero Rozo.",
   keywords = "psicóloga, terapia, ansiedad, salud mental, psicología clínica, terapia online, Bogotá, Montero Rozo",
   image = "/assets/images/logo/logomr.jpeg",
   url = "https://monterorozo.com",

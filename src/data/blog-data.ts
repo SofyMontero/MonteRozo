@@ -29,7 +29,7 @@ const blog_data: IBlog[] = [
     category: "Terapia online",
     page: "home",
     introduction: [
-      "La videoterapia ha demostrado ser tan efectiva como la terapia presencial para muchas problemáticas. Sin embargo, persisten dudas sobre su calidad y confidencialidad.",
+      "La videoterapia ha demostrado ser tan efectiva como otras modalidades para muchas problemáticas. Sin embargo, persisten dudas sobre su calidad y confidencialidad.",
       "Aquí desmitificamos los prejuicios más comunes y te ayudamos a decidir si la modalidad online encaja contigo.",
     ],
     author_note:
