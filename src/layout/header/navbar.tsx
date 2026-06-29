@@ -1,4 +1,5 @@
 import { BRAND } from "@/data/brand-assets";
+import { BookAppointmentButton } from "@/components/booking/book-appointment-button";
 import { SectionLink } from "@/components/section-link";
 import { SECTIONS } from "@/data/sections";
 import { WHATSAPP_URL } from "@/data/contact-config";
@@ -39,17 +40,14 @@ const Navbar = () => {
         </a>
       </li>
       <li className="d-lg-none px-3 pb-2">
-        <SectionLink
-          section={SECTIONS.contacto}
-          className="signup-btn-one icon-link w-100 mt-2"
-        >
+        <BookAppointmentButton className="signup-btn-one icon-link w-100 mt-2">
           <span
             className="flex-fill text-white text-center"
             style={{ background: "#A7B29C" }}
           >
             Reservar cita
           </span>
-        </SectionLink>
+        </BookAppointmentButton>
       </li>
     </ul>
   );

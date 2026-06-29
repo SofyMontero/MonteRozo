@@ -6,6 +6,7 @@ import {
   Shield,
   Video,
 } from "lucide-react";
+import { BookAppointmentButton } from "@/components/booking/book-appointment-button";
 import { SectionLink } from "@/components/section-link";
 import { SECTIONS } from "@/data/sections";
 import Slider from "react-slick";
@@ -95,14 +96,13 @@ const HeroBannerTwo = () => {
                 </p>
 
                 <div className="hero-banner-mr__actions">
-                  <SectionLink
-                    section={SECTIONS.contacto}
+                  <BookAppointmentButton
                     className="btn btn-success bg-lime-500 hero-banner-mr__btn-primary"
                     aria-label="Reservar primera cita"
                   >
                     Reservar cita
                     <ArrowRight size={16} />
-                  </SectionLink>
+                  </BookAppointmentButton>
                   <SectionLink
                     section={SECTIONS.honorarios}
                     className="btn btn-outline-light hero-banner-mr__btn-secondary"
@@ -170,13 +170,10 @@ const HeroBannerTwo = () => {
                   ))}
                 </div>
 
-                <SectionLink
-                  section={SECTIONS.contacto}
-                  className="btn btn-success bg-lime-500 w-100 hero-banner-mr__btn-primary"
-                >
+                <BookAppointmentButton className="btn btn-success bg-lime-500 w-100 hero-banner-mr__btn-primary">
                   Quiero reservar mi cita
                   <ArrowRight size={16} />
-                </SectionLink>
+                </BookAppointmentButton>
 
                 <p className="hero-banner-mr__card-note mb-0">
                   Respuesta en menos de 24 h · Sin compromiso en la consulta

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BRAND } from "@/data/brand-assets";
+import { BookAppointmentButton } from "@/components/booking/book-appointment-button";
 import { SectionLink } from "@/components/section-link";
 import { SECTIONS } from "@/data/sections";
 import { WHATSAPP_URL } from "@/data/contact-config";
@@ -68,9 +69,9 @@ const HeaderTwo = () => {
                     </a>
                   </li>
                   <li className="d-none d-lg-inline-block ms-3 ms-xl-4">
-                    <SectionLink section={SECTIONS.contacto} className="btn-one tran3s">
+                    <BookAppointmentButton className="btn-one tran3s">
                       Reservar cita
-                    </SectionLink>
+                    </BookAppointmentButton>
                   </li>
                 </ul>
               </div>

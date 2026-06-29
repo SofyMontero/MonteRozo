@@ -7,6 +7,7 @@ import {
   UserCheck,
   Video,
 } from "lucide-react";
+import { BookAppointmentButton } from "@/components/booking/book-appointment-button";
 import { SectionLink } from "@/components/section-link";
 import { FeatureIcon } from "@/components/ui/feature-icon";
 import { SECTIONS } from "@/data/sections";
@@ -127,9 +128,9 @@ const BlockFeatureTwo = () => {
         </div>
 
         <div className="como-funciona__actions">
-          <SectionLink section={SECTIONS.contacto} className="btn-four">
+          <BookAppointmentButton className="btn-four">
             Agendar primera consulta
-          </SectionLink>
+          </BookAppointmentButton>
           <SectionLink
             section={SECTIONS.servicios}
             className="btn-three icon-link d-inline-flex align-items-center gap-2"

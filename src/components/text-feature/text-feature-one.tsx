@@ -1,8 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import { ArrowRight, Baby, Check, UserRound, Users } from "lucide-react";
-import { SectionLink } from "@/components/section-link";
+import { BookAppointmentButton } from "@/components/booking/book-appointment-button";
 import { FeatureIcon } from "@/components/ui/feature-icon";
-import { SECTIONS } from "@/data/sections";
 
 const interventionAreas = [
   {
@@ -90,13 +89,10 @@ const TextFeatureOne = () => {
               primera sesión exploraremos tus necesidades y definiremos juntos un
               plan de trabajo claro, personalizado y basado en evidencia.
             </p>
-            <SectionLink
-              section={SECTIONS.contacto}
-              className="btn-four icon-link d-inline-flex align-items-center gap-2"
-            >
+            <BookAppointmentButton className="btn-four icon-link d-inline-flex align-items-center gap-2">
               <span>Agenda una primera consulta</span>
               <ArrowRight size={16} />
-            </SectionLink>
+            </BookAppointmentButton>
           </div>
         </div>
 

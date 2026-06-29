@@ -1,4 +1,5 @@
 import { BRAND } from "@/data/brand-assets";
+import { BookAppointmentButton } from "@/components/booking/book-appointment-button";
 import { SectionLink } from "@/components/section-link";
 import { SECTIONS } from "@/data/sections";
 import { CONTACT_EMAIL, CONTACT_MAILTO, WHATSAPP_URL } from "@/data/contact-config";
@@ -77,7 +78,9 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <SectionLink section={SECTIONS.contacto}>Agendar cita</SectionLink>
+                  <BookAppointmentButton className="book-appointment-link">
+                    Agendar cita
+                  </BookAppointmentButton>
                 </li>
               </ul>
             </div>

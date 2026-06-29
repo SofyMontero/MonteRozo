@@ -1,18 +1,18 @@
 const testimonials = [
   {
     quote:
-      "Llegué con mucha ansiedad y sin saber por dónde empezar. Me sentí escuchada desde la primera sesión y hoy manejo mis emociones con mucha más calma.",
-    author: "Paciente, 32 años",
+      "Buscábamos apoyo para nuestro hijo adolescente y encontramos un espacio donde se sintió escuchado. Hoy tenemos herramientas para acompañarlo y comunicarnos mejor en casa.",
+    author: "Madre de familia",
   },
   {
     quote:
-      "La terapia online fue perfecta para mi rutina. Profesional, cercana y siempre con un espacio seguro para hablar sin miedo.",
-    author: "Paciente, 28 años",
+      "Al principio me costaba abrirme, pero la terapia virtual me resultó cómoda. Aprendí a manejar la ansiedad y a expresar lo que siento sin miedo a ser juzgado.",
+    author: "Adolescente, 16 años",
   },
   {
     quote:
-      "Trabajamos mi autoestima y mis relaciones. Noté cambios reales en pocas semanas y con herramientas que sigo usando.",
-    author: "Paciente, 41 años",
+      "El acompañamiento nos ayudó como padres a entender mejor las necesidades emocionales de nuestra hija. Profesional, cercano y siempre respetuoso con nuestro ritmo.",
+    author: "Padres de adolescente",
   },
 ];
 
@@ -27,8 +27,8 @@ const FancyBannerTwo = () => {
                 <h2>Lo que dicen quienes confiaron en mí</h2>
               </div>
               <p className="text-lg mt-40 lg-mt-30 mb-0">
-                Testimonios anonimizados con consentimiento. Tu privacidad siempre
-                es prioridad.
+                Experiencias de familias y adolescentes, anonimizadas con
+                consentimiento. Tu privacidad siempre es prioridad.
               </p>
             </div>
           </div>
