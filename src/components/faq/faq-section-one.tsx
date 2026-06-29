@@ -1,5 +1,4 @@
-import { SectionLink } from "@/components/section-link";
-import { SECTIONS } from "@/data/sections";
+import { BookAppointmentButton } from "@/components/booking/book-appointment-button";
 import faq_data from "../../data/faq-data";
 import FaqItem from "./faq-item";
 
@@ -17,9 +16,9 @@ const FaqSectionOne = ({ cls }: { cls?: string }) => {
             <p className="text-lg mb-40 lg-mb-20">
               ¿Tienes otra pregunta? Escríbeme y te respondo con gusto.
             </p>
-            <SectionLink section={SECTIONS.contacto} className="btn-four">
-              Contáctanos
-            </SectionLink>
+            <BookAppointmentButton className="btn-four">
+              Reservar cita
+            </BookAppointmentButton>
           </div>
 
           <div className="col-lg-7">

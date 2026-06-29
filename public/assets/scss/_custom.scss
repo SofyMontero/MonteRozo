@@ -49,12 +49,30 @@ body.nav-open {
   border: none;
 }
 
-.address-block-one .icon .feature-icon {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+.address-block-one .icon .feature-icon,
+.address-block-one .icon .address-block-one__icon {
+  width: auto;
+  height: auto;
+  min-width: unset;
+  min-height: unset;
+  padding: 0;
+  border-radius: 0;
   background: transparent;
   border: none;
+  color: #fff;
+}
+
+.address-block-one .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mr-secondary, #a7b29c);
+  box-shadow: 0 8px 24px rgba(167, 178, 156, 0.35);
+}
+
+.address-block-one .icon svg {
+  display: block;
+  stroke: currentColor;
 }
 
 .card-style-one:hover .feature-icon {
@@ -947,6 +965,77 @@ body.nav-open {
 .booking-modal__desc {
   color: #666;
   line-height: 1.5;
+}
+
+.booking-modal__confirm-btn {
+  margin-top: 16px;
+}
+
+.booking-modal__success {
+  text-align: center;
+  padding: 8px 4px 4px;
+}
+
+.booking-modal__success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: rgba(167, 178, 156, 0.18);
+  color: var(--lime-500, #6b7d5e);
+}
+
+.booking-modal__success-title {
+  margin-bottom: 20px;
+  font-size: 1.35rem;
+  color: var(--heading-color, #1a1a1a);
+}
+
+.booking-modal__success-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  text-align: left;
+}
+
+.booking-modal__success-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.925rem;
+  line-height: 1.55;
+  color: #444;
+}
+
+.booking-modal__success-list li:last-child {
+  border-bottom: 0;
+}
+
+.booking-modal__success-list-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--lime-500, #7a8a6e);
+}
+
+.booking-modal__success-note {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.booking-modal__success-note a {
+  color: var(--lime-500, #7a8a6e);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.booking-modal__success-note a:hover {
+  text-decoration: underline;
 }
 
 .booking-modal__calendar-wrap {

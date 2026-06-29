@@ -14,6 +14,7 @@ import {
   type BookableSlot,
 } from "@/data/calendar-config";
 import { BookingFallbackForm } from "./booking-fallback-form";
+import { BookingGoogleSuccess } from "./booking-google-success";
 
 type BookingModalProps = {
   open: boolean;
@@ -23,36 +24,57 @@ type BookingModalProps = {
 export function BookingModal({ open, onOpenChange }: BookingModalProps) {
   const slots = useMemo(() => getUpcomingBookableSlots(), []);
   const [selectedSlot, setSelectedSlot] = useState<BookableSlot | null>(null);
+  const [googleBookingConfirmed, setGoogleBookingConfirmed] = useState(false);
 
   const handleClose = (nextOpen: boolean) => {
-    if (!nextOpen) setSelectedSlot(null);
+    if (!nextOpen) {
+      setSelectedSlot(null);
+      setGoogleBookingConfirmed(false);
+    }
     onOpenChange(nextOpen);
+  };
+
+  const handleGoogleBookingConfirm = () => {
+    setGoogleBookingConfirmed(true);
   };
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent className="booking-modal">
-        <DialogHeader className="booking-modal__header">
-          <DialogTitle className="booking-modal__title">
-            Reservar cita
-          </DialogTitle>
-          <DialogDescription className="booking-modal__desc">
-            {HAS_GOOGLE_APPOINTMENTS
-              ? "Elige un horario disponible. La cita se creará en Google Calendar y recibirás confirmación por correo."
-              : "Selecciona un horario y completa tus datos. Te enviaremos la confirmación por correo."}
-          </DialogDescription>
-        </DialogHeader>
-
-        {HAS_GOOGLE_APPOINTMENTS ? (
-          <div className="booking-modal__calendar-wrap">
-            <iframe
-              src={GOOGLE_CALENDAR_APPOINTMENT_URL}
-              title="Agenda de citas — MonteRozo Psicología"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+        {googleBookingConfirmed ? (
+          <BookingGoogleSuccess onClose={() => handleClose(false)} />
         ) : (
+          <>
+            <DialogHeader className="booking-modal__header">
+              <DialogTitle className="booking-modal__title">
+                Reservar cita
+              </DialogTitle>
+              <DialogDescription className="booking-modal__desc">
+                {HAS_GOOGLE_APPOINTMENTS
+                  ? "Elige un horario disponible y completa tus datos."
+                  : "Selecciona un horario y completa tus datos."}
+              </DialogDescription>
+            </DialogHeader>
+
+            {HAS_GOOGLE_APPOINTMENTS ? (
+              <>
+                <div className="booking-modal__calendar-wrap">
+                  <iframe
+                    src={GOOGLE_CALENDAR_APPOINTMENT_URL}
+                    title="Agenda de citas — MonteRozo Psicología"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+                <button
+                  type="button"
+                  className="btn-four w-100 booking-modal__confirm-btn"
+                  onClick={handleGoogleBookingConfirm}
+                >
+                  Ya reservé mi cita
+                </button>
+              </>
+            ) : (
           <div className="booking-modal__fallback">
             {!selectedSlot ? (
               <>
@@ -99,11 +121,13 @@ export function BookingModal({ open, onOpenChange }: BookingModalProps) {
                 </p>
                 <BookingFallbackForm
                   slot={selectedSlot}
-                  onSuccess={() => handleClose(false)}
+                  onSuccess={handleGoogleBookingConfirm}
                 />
               </>
             )}
           </div>
+        )}
+          </>
         )}
       </DialogContent>
     </Dialog>

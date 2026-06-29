@@ -30,9 +30,7 @@ type BookingFallbackFormProps = {
 };
 
 export function BookingFallbackForm({ slot, onSuccess }: BookingFallbackFormProps) {
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">(
-    "idle",
-  );
+  const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
 
   const {
     register,
@@ -78,8 +76,7 @@ export function BookingFallbackForm({ slot, onSuccess }: BookingFallbackFormProp
       if (!response.ok) throw new Error("send failed");
 
       downloadIcsFile(icsContent, "cita-monterorozo.ics");
-      setStatus("success");
-      setTimeout(onSuccess, 1800);
+      onSuccess();
     } catch {
       setStatus("error");
     }
@@ -107,11 +104,6 @@ export function BookingFallbackForm({ slot, onSuccess }: BookingFallbackFormProp
         <textarea id="booking-message" rows={3} {...register("message")} />
       </div>
 
-      {status === "success" && (
-        <p className="text-success small mb-3">
-          Solicitud enviada. Revisa tu correo y el archivo de calendario descargado.
-        </p>
-      )}
       {status === "error" && (
         <p className="text-danger small mb-3">
           No se pudo enviar. Intenta de nuevo o escríbenos por WhatsApp.
